@@ -72,7 +72,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $isDelete = Post::destroy($id);
-        if($isDelete == 1)return response()->json(['message'=>'Student deleted'],200);
+        if($isDelete == 1)return response()->json(['message'=>'Post deleted'],200);
         return response()->json(['message'=>'ID NOT EXIST'],404);
     }
 }
